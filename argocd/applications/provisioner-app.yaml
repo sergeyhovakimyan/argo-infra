@@ -8,6 +8,6 @@ spec:
   source:
     repoURL: https://github.com/sergeyhovakimyan/argo-infra.git
     targetRevision: HEAD
-    path: argocd/manifests/provisiioner
+    path: argocd/manifests/provisioner
   destination:
     server: https://kubernetes.default.svc
