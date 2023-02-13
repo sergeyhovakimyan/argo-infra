@@ -1,0 +1,32 @@
+"apiVersion": "karpenter.sh/v1alpha5"
+"kind": "Provisioner"
+"metadata":
+  "name": "test"
+"spec":
+  "consolidation":
+    "enabled": true
+  "kubeletConfiguration":
+    "containerRuntime": "containerd"
+  "labels":
+    "test": "true"
+  "providerRef":
+    "name": "test"
+  "requirements":
+  - "key": "karpenter.k8s.aws/instance-family"
+    "operator": "In"
+    "values":
+    - "m5"
+  - "key": "karpenter.sh/capacity-type"
+    "operator": "In"
+    "values":
+    - "spot"
+    - "on-demand"
+  - "key": "karpenter.k8s.aws/instance-size"
+    "operator": "In"
+    "values":
+    - "nano"
+    - "micro"
+    - "small"
+    - "large"
+    - "medium"
+  "weight": 10
