@@ -10,4 +10,5 @@
     "karpenter.sh/discovery": "sak-sergey"
   "subnetSelector":
     "karpenter.sh/discovery": "true"
-  "tags": {}
+  "tags":
+    karpenter.sh/discovery: "sak-sergey"
